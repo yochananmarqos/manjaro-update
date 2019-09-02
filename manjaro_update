@@ -157,8 +157,8 @@ _update_full(){
             if [[ -f /usr/bin/pacman-mirrors ]]                                                                         # checks, whether file "pacman-mirrors" exists
             then
                 sudo find /var/cache/pacman/pkg/ -iname "*.part" -exec rm {} \;		 # remove partially downloaded packages
-                sudo pacman-mirrors -f 3 && sudo pacman -Syyu --noconfirm           # choose mirrors server (with up-to-date packages) with lowest ping from all available mirrors and sync database.
-                pamac update -a
+                sudo pacman-mirrors -f 5 && sudo pacman -Syyu --noconfirm           # choose mirrors server (with up-to-date packages) with lowest ping from all available mirrors and sync database.
+                yay -Sua
 
             elif [[ -f /usr/bin/reflector ]]                                      # checks, whether file "reflector" exists
             then
