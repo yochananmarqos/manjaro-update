@@ -18,7 +18,7 @@ So what is it actually doing?
   - Check for database lock file and remove it in case it's present
   - Remove partially downloaded packages
   - Mirrorsync and system update via Pacman
-  - AUR update via Pamac CLI [```pamac update -a```] 
+  - AUR update via installed AUR helper: yay, pikaur, aurman, pakku, trizen or pacaur
   ( Note that I didn't want to make this a dependency, so it will not install Pamac )
   - Search for orphaned packages and prompt for removal
   - Check for failed systemd service(s)
